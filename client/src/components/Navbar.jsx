@@ -23,6 +23,9 @@ export const SideBar = ({ isOpen, closeSidebar }) => {
       <a href="#projects" className="nav-link" onClick={closeSidebar}>
         Projects
       </a>
+      <a href="#skills" className="nav-link" onClick={closeSidebar}>
+        Skills
+      </a>
       <a href="#about" className="nav-link" onClick={closeSidebar}>
         About
       </a>
@@ -49,9 +52,9 @@ export const Nav = ({ blog = false }) => {
   return (
     <>
       <nav className="navbar">
-        <div className="hover:text-(--white) transition-colors duration-300">
-          <h1 className="text-(--primary) text-2xl">
-            {"{"} <span className="font-bold text-(--white)">SaFal</span> {"}."}
+        <div className="group transition-colors duration-300 cursor-crosshair">
+          <h1 className="text-(--primary) text-2xl group-hover:text-(--white)">
+            {"{"} <span className="font-bold text-(--white) group-hover:text-(--primary)">SaFal</span> {"}."}
           </h1>
         </div>
 
@@ -64,6 +67,11 @@ export const Nav = ({ blog = false }) => {
           <li>
             <a href="./#projects" className="nav-link">
               Projects
+            </a>
+          </li>
+          <li>
+            <a href="./#skills" className="nav-link">
+              Skills
             </a>
           </li>
           <li>
