@@ -32,7 +32,7 @@ export const Blogs = () => {
   useEffect(() => {
     const getBlogs = async () => {
       try {
-        const res = await axios.get(`${API}/blogs`);
+        const res = await axios.get(`${API}blogs`);
         setBlog(res.data);
       } catch (err) {
         console.log(err);

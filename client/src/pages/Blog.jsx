@@ -15,7 +15,7 @@ export const Blog = () => {
   useEffect(() => {
     const getBlog = async () => {
       try {
-        const res = await axios.get(`${API}/blog/${id}`);
+        const res = await axios.get(`${API}blog/${id}`);
         console.log(id);
         setBlog(res.data);
       } catch (err) {
