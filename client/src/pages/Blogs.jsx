@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+const API = import.meta.env.VITE_API_URL;
+
 const BlogCard = ({ blog }) => {
   return (
     <Link
@@ -30,7 +32,7 @@ export const Blogs = () => {
   useEffect(() => {
     const getBlogs = async () => {
       try {
-        const res = await axios.get("https://portfolio-srsl.onrender.com/blogs");
+        const res = await axios.get(`${API}/blogs`);
         setBlog(res.data);
       } catch (err) {
         console.log(err);

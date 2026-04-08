@@ -35,7 +35,7 @@ export const UploadBlog = () => {
       const formData = new FormData();
       formData.append("file", filedata.file);
 
-      const res = axios.post(`${API}uploadblog`, formData, {
+      const res = axios.post(`${API}/uploadblog`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

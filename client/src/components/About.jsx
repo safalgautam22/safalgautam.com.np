@@ -20,11 +20,11 @@ export const About = () => {
           aiming to grow both as a developer and a person.
         </p>
         <div className="flex flex-row md:justify-start justify-around">
-          <a href="https://www.facebook.com/safalgautam22/" target="_blank">
+          <a href="https://www.facebook.com/gtm.safal/" target="_blank">
             <img src={fb} alt="Facebook" className="icons" />
           </a>
 
-          <a href="https://www.instagram.com/safalgautam22/" target="_blank">
+          <a href="https://www.instagram.com/__safal622/" target="_blank">
             <img src={instagram} alt="Instagram" className="icons" />
           </a>
 

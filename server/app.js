@@ -13,7 +13,7 @@ const upload = multer({storage})
 connectDatabase()
 
 app.use(cors({
-    origin : "http://localhost:5173"
+    origin: ["http://localhost:5173", "https://safalgautam.com.np"],
 }
 ))
 
