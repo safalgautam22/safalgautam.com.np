@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Nav } from "../components/Navbar";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -82,12 +82,24 @@ export const DeleteBlog = () => {
   return (
     <>
       <Toaster position="top-center" />
-      <button
-        className="w-1/3 h-1/3 bg-(--primary) text-2xl font-bold rounded m-auto"
-        onClick={deleteblog}
-      >
-        Delete
-      </button>
+      <div className="flex items-center flex-col gap-2">
+        <div className="grid h-16 py-2">
+          <p>Do you really want to delete?</p>
+          <p>{id}</p>
+        </div>
+        <button
+          className="w-50 h-1/3 bg-(--primary) text-2xl font-bold rounded"
+          onClick={deleteblog}
+        >
+          Delete
+        </button>
+        <Link
+          to="../blogs"
+          className="w-50 h-1/3 text-(--primary) text-xl font-medium rounded text-center"
+        >
+          Return
+        </Link>
+      </div>
     </>
   );
 };

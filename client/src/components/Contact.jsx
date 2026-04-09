@@ -52,6 +52,7 @@ export const Contact = () => {
           <input
             type="text"
             name="name"
+            id="name"
             value={formData.name}
             onChange={handleChange}
             className="border-2 border-gray-400 p-2 rounded"
@@ -65,6 +66,7 @@ export const Contact = () => {
           <input
             type="email"
             name="email"
+            id="email"
             value={formData.email}
             onChange={handleChange}
             className="border-2 border-gray-400 p-2 rounded"
@@ -77,6 +79,7 @@ export const Contact = () => {
           <label htmlFor="message">Message</label>
           <textarea
             name="message"
+            id="message"
             value={formData.message}
             onChange={handleChange}
             className="border-2 border-gray-400 p-2 rounded resize-none min-h-35"

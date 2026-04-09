@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import CV from "../assets/CV.pdf";
+import { HashLink as Link } from "react-router-hash-link";
 import hamburger from "../assets/hamburger.svg";
 
 export const SideBar = ({ isOpen, closeSidebar }) => {
@@ -14,27 +13,27 @@ export const SideBar = ({ isOpen, closeSidebar }) => {
         className="self-end text-(--white) text-2xl font-bold hover:text-(--primary) active:rotate-45"
         onClick={closeSidebar}
       >
-        X
+        &#10008;
       </button>
 
-      <a href="/" className="nav-link" onClick={closeSidebar}>
+      <Link smooth to="/#home" className="nav-link" onClick={closeSidebar}>
         Home
-      </a>
-      <a href="#projects" className="nav-link" onClick={closeSidebar}>
+      </Link>
+      <Link smooth to="/#projects" className="nav-link" onClick={closeSidebar}>
         Projects
-      </a>
-      <a href="#skills" className="nav-link" onClick={closeSidebar}>
+      </Link>
+      <Link smooth to="/#skills" className="nav-link" onClick={closeSidebar}>
         Skills
-      </a>
-      <a href="#about" className="nav-link" onClick={closeSidebar}>
+      </Link>
+      <Link smooth to="/#about" className="nav-link" onClick={closeSidebar}>
         About
-      </a>
-      <Link to="/blogs" onClick={closeSidebar}>
+      </Link>
+      <Link smooth to="/blogs" onClick={closeSidebar}>
         Blogs
       </Link>
-      <a href="#contact" className="nav-link" onClick={closeSidebar}>
+      <Link smooth to="/#contact" className="nav-link" onClick={closeSidebar}>
         Contact
-      </a>
+      </Link>
     </div>
   );
 };
@@ -42,65 +41,66 @@ export const SideBar = ({ isOpen, closeSidebar }) => {
 export const Nav = ({ blog = false }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  function DownloadCV() {
-    const link = document.createElement("a");
-    link.href = CV;
-    link.download = "Safal_Gautam_CV.pdf";
-    link.click();
-  }
-
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar flex justify-between">
         <div className="group transition-colors duration-300 cursor-crosshair">
           <h1 className="text-(--primary) text-2xl group-hover:text-(--white)">
-            {"{"} <span className="font-bold text-(--white) group-hover:text-(--primary)">SaFal</span> {"}."}
+            {"{"}{" "}
+            <span className="font-bold text-(--white) group-hover:text-(--primary)">
+              SaFal
+            </span>{" "}
+            {"}."}
           </h1>
         </div>
 
         <ul className="nav-links">
           <li>
-            <a href="/" className="nav-link">
+            <Link smooth to="/#home" className="nav-link">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./#projects" className="nav-link">
+            <Link smooth to="/#projects" className="nav-link">
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./#skills" className="nav-link">
+            <Link smooth to="/#skills" className="nav-link">
               Skills
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./#about" className="nav-link">
+            <Link smooth to="/#about" className="nav-link">
               About
-            </a>
+            </Link>
           </li>
-          <Link to="/blogs" className="nav-link">
-            <li>Blogs</li>
-          </Link>
           <li>
-            <a href="./#contact" className="nav-link">
+            <Link smooth to="/blogs" className="nav-link">
+              Blogs
+            </Link>
+          </li>
+          <li>
+            <Link smooth to="/#contact" className="nav-link">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
         <div className="flex items-center gap-4">
           {!blog && (
-            <button
-              className="bg-(--primary) w-24 h-10 text-xl font-bold rounded-lg hover:bg-amber-600 hover:-translate-y-1 transition"
-              onClick={DownloadCV}
+            <a
+              href="https://drive.google.com/uc?export=download&id=19l-yRFaEZd6YiNzxx49jTSVMfIzq1v2O"
+              className="bg-(--primary) w-20 h-10 text-xl font-bold rounded-lg hover:opacity-80 hover:-translate-y-1 transition text-center content-center"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               My CV
-            </button>
+            </a>
           )}
 
           <button
-            className="sm:hidden p-2 w-12 h-12 rounded-lg hover:bg-[#110b0370] hover:-translate-y-1 active:rotate-45 transition"
+            className="sm:hidden p-2 w-10 h-10 rounded-lg hover:bg-[#110b0370] hover:-translate-y-1 active:rotate-45 transition"
             onClick={() => setSidebarOpen(true)}
           >
             <img src={hamburger} alt="Menu" />
