@@ -31,7 +31,7 @@ export const Blog = () => {
     <>
       {loading ? (
         <div className="flex items-center justify-center h-96">
-          <div className="bg-[#110b0370] rounded-3xl p-4 flex items-center justify-center">
+          <div className="bg-(--black2) rounded-3xl p-4 flex items-center justify-center">
             <RingLoader color="#ff5000" size={40} />
           </div>
         </div>
@@ -45,7 +45,7 @@ export const Blog = () => {
 
           <Nav blog={true} />
 
-          <div className="mt-20 md:w-4/5 m-auto">
+          <div className="mt-20 md:w-4/5 m-auto  bg-(--black2) rounded-3xl md:px-12 md:py-24 px-6 py-8">
             <h1 className="text-center md:text-3xl text-2xl font-bold text-(--primary) mb-10">
               {blog.title}
             </h1>

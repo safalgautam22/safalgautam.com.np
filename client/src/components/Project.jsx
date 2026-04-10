@@ -6,9 +6,9 @@ const exception = ["safalgautam22", "vscode_customization", "heliosis", "Cpp"];
 
 const Card = ({ repo }) => {
   return (
-    <div className="bg-[#110b0370] rounded-2xl shadow-lg p-6 mb-10 h-80 flex flex-col w-[90%] justify-around hover:-translate-y-3 hover:scale-110">
+    <div className="bg-(--black2) rounded-2xl shadow-lg p-6 mt-10 h-80 flex flex-col w-[90%] justify-around hover:-translate-y-3 hover:scale-110">
       <h2 className="text-xl font-bold mb-2">{repo.name}</h2>
-      <p className="text-gray-300 text-base mb-4 r">
+      <p className="text-(--white) text-base mb-4 r">
         {repo.description || "No description provided."}
       </p>
       <div className="text-sm">
@@ -65,7 +65,7 @@ export const Project = () => {
 
   return (
     <section>
-      <div className="text-center mb-10">
+      <div className="text-center">
         <h1 className="text-3xl font-bold">My Projects</h1>
         <span className="italic text-gray-500">
           Projects built with passion, precision, and a learner’s mindset.
@@ -74,7 +74,7 @@ export const Project = () => {
 
       {loading ? (
         <div className="flex items-center justify-center h-96">
-          <div className="bg-[#110b0370] rounded-3xl p-4 flex items-center justify-center">
+          <div className="bg-(--black2) rounded-3xl p-4 flex items-center justify-center">
             <RingLoader color="#ff5000" size={40} />
           </div>
         </div>
@@ -87,7 +87,7 @@ export const Project = () => {
           </div>
           <div className="flex justify-center">
             <button
-              className="bg-(--primary) p-2 w-35 h-10 text-xl rounded-full hover:bg-amber-800 font-semibold"
+              className="bg-(--primary) p-2 text-xl rounded-full hover:opacity-80 hover:-translate-y-1 hover:shadow-amber-400 hover:bg-amber-700 font-semibold"
               onClick={() => {
                 if (visibleCount >= repos.length) {
                   setVisibleCount(2);
@@ -100,7 +100,37 @@ export const Project = () => {
                 }
               }}
             >
-              {visibleCount < repos.length ? "See More ▼" : "See Less ▲"}
+              {visibleCount < repos.length ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={4}
+                  stroke="currentColor"
+                  className="w-8 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={4}
+                  stroke="currentColor"
+                  className="w-8 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 15l7-7 7 7"
+                  />
+                </svg>
+              )}
             </button>
           </div>
         </div>

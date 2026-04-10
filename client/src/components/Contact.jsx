@@ -22,8 +22,8 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      console.log(formData)
-      await axios.post(API+"submit", formData);
+      console.log(formData);
+      await axios.post(API + "submit", formData);
       toast.success("Contact form submitted successfully ");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
@@ -33,19 +33,18 @@ export const Contact = () => {
   };
 
   return (
-    <section>
+    <section className="flex items-center flex-col">
       <Toaster position="top-center" />
-
       <div>
         <h2 className="text-center text-3xl font-bold">Contact Me</h2>
         <p className="text-center text-gray-500 italic">
-          I’m open to new opportunities and always happy to connect.
+          Let’s build something amazing together. <br/>Reach out via email below or connect with me on GitHub.
         </p>
       </div>
 
       <form
         onSubmit={formSubmission}
-        className="flex flex-col items-center gap-4 m-10"
+        className="flex flex-col items-center gap-4 m-10 border-dashed border border-gray-500 p-6 w-100 rounded-2xl justify-around "
       >
         <div className="inputs">
           <label htmlFor="name">Name:</label>
@@ -88,10 +87,13 @@ export const Contact = () => {
           />
         </div>
 
-        <button type="submit" className="bg-(--primary) w-75 rounded p-2.5 font-bold mt-5 hover:-translate-y-1 hover:opacity-80">
+        <button
+          type="submit"
+          className="bg-(--primary) w-75 rounded p-2.5 font-bold mt-5 hover:-translate-y-1 hover:bg-amber-700"
+        >
           Send Message
         </button>
       </form>
     </section>
   );
-}
+};

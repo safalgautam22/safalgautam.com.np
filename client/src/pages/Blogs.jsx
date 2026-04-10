@@ -12,7 +12,7 @@ const BlogCard = ({ blog }) => {
   return (
     <Link
       to={"/blog/" + blog._id}
-      className="p-10 rounded-2xl mt-10 bg-[#110b0370] shadow-lg hover:scale-105 md:w-[60%]"
+      className="p-10 rounded-2xl mt-10 bg-(--black2) shadow-lg hover:scale-105 md:w-[60%]"
     >
       <h1 className="md:text-3xl text-xl font-bold text-(--primary) mb-5 hover:underline transition-all ease-in-out duration-300 ">
         {blog.title}
@@ -60,7 +60,7 @@ export const Blogs = () => {
 
       {loading ? (
         <div className="flex items-center justify-center h-96">
-          <div className="bg-[#110b0370] rounded-3xl p-4 flex items-center justify-center">
+          <div className="bg-(--black2) rounded-3xl p-4 flex items-center justify-center">
             <RingLoader color="#ff5000" size={40} />
           </div>
         </div>

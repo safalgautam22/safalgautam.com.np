@@ -5,6 +5,14 @@
   --primary: #ff5000;
   --black: #1e1e1e;
   --white: #fafafa;
+  --black2: #110b0370;
+}
+
+.day {
+  --primary: #ff5000;
+  --black: #fff3e8;
+  --white: #1e1e1e;
+  --black2: #f4eae1;
 }
 
 html {
@@ -45,8 +53,10 @@ body {
   color: var(--white);
   text-decoration: none;
 }
+.nav-link:active {
+  transform: scale(1.1);
+}
 
-/* ::after underline */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -89,6 +99,6 @@ body {
   width: 300px;
 }
 
-.blogcontent ul{
+.blogcontent ul {
   list-style-type: lower-alpha;
 }

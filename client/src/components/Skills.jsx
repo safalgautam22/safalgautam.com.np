@@ -39,10 +39,10 @@ export const Skills = () => {
           return (
             <div
               key={i}
-              className="w-20 h-20 bg-[#110b0370] rounded-xl flex flex-col items-center justify-center hover:scale-125 transition hover:border border-[#ff5000] hover:shadow-lg"
+              className="w-20 h-20 bg-(--black2) rounded-xl flex flex-col items-center justify-center hover:scale-125 transition hover:border border-(--primary) hover:shadow-lg"
             >
-              <Icon className="text-[#ff5000] text-3xl" />
-              <span className="text-xs mt-1 text-white">{skill.name}</span>
+              <Icon className="text-(--primary) text-3xl" />
+              <span className="text-xs mt-1 text-(--primary)">{skill.name}</span>
             </div>
           );
         })}

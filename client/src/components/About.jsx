@@ -1,10 +1,12 @@
-import aboutPic from "../assets/pic1.png"
-import fb from "../assets/fb.svg"
-import github from "../assets/github.svg"
-import instagram from "../assets/instagram.svg"
-import linkedin from "../assets/linkedin.svg"
-import x from "../assets/x.svg"
-import discord from "../assets/discord.svg"
+import aboutPic from "../assets/pic1.png";
+import fb from "../assets/fb.svg";
+import github from "../assets/github.svg";
+import instagram from "../assets/instagram.svg";
+import linkedin from "../assets/linkedin.svg";
+import x from "../assets/x.svg";
+import discord from "../assets/discord.svg";
+
+import { FaTwitter } from "react-icons/fa";
 
 export const About = () => {
   return (
@@ -12,12 +14,12 @@ export const About = () => {
       <div className="md:w-150 flex flex-col justify-center md:text-left text-center">
         <h3 className="text-3xl font-bold mb-6">About Myself !</h3>
         <p>
-          I’m Safal Gautam, a Computer Engineering undergrad with a strong
-          curiosity for technology and a commitment to learning every day. I
-          believe in steady, consistent effort and focusing on the fundamentals
-          to build practical solutions. I’m passionate about improving my skills
-          and approaching challenges with patience and an open mind, always
-          aiming to grow both as a developer and a person.
+          I’m Safal Gautam, a computer engineering student and full-stack
+          enthusiast. My work ranges from C/C++ systems programming to Python
+          automation and React-based web applications. I focus on building tools
+          and projects that solve real problems efficiently. When I’m not
+          coding, I document my learning journey and experiment with new
+          technologies to stay ahead in modern development.
         </p>
         <div className="flex flex-row md:justify-start justify-around">
           <a href="https://www.facebook.com/gtm.safal/" target="_blank">
@@ -33,7 +35,7 @@ export const About = () => {
           </a>
 
           <a href="https://x.com/safalgautam22/" target="_blank">
-            <img src={x} alt="Twitter" className="icons" />
+            <img src={x} alt="Twitter" className="icons " />
           </a>
 
           <a href="https://github.com/safalgautam22/" target="_blank">
@@ -49,7 +51,11 @@ export const About = () => {
         </div>
       </div>
       <div></div>
-      <img src={aboutPic} alt="About Image" className="object-contain md:w-1/4 hover:scale-110 w-1/2 m-auto md:m-0" />
+      <img
+        src={aboutPic}
+        alt="About Image"
+        className="object-contain md:w-1/4 hover:scale-110 w-1/2 m-auto md:m-0 rounded-full"
+      />
     </section>
   );
-}
+};
