@@ -6,8 +6,8 @@ const exception = ["safalgautam22", "vscode_customization", "heliosis", "Cpp"];
 
 const Card = ({ repo }) => {
   return (
-    <div className="bg-(--black2) rounded-2xl shadow-lg p-6 mt-10 h-70 flex flex-col w-[90%] justify-around hover:-translate-y-3 hover:scale-110">
-      <h2 className="text-xl font-bold mb-2">{repo.name}</h2>
+    <div className="bg-(--black2) rounded-2xl shadow-lg p-5 mt-10 h-70 flex flex-col w-[94%] justify-around hover:-translate-y-3 hover:scale-110">
+      <h2 className="text-xl font-semibold mb-2">{repo.name}</h2>
       <p className="text-(--white) text-base mb-4 line-clamp-5">
         {repo.description || "No description provided."}
       </p>

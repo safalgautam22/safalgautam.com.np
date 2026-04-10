@@ -6,8 +6,6 @@ import linkedin from "../assets/linkedin.svg";
 import x from "../assets/x.svg";
 import discord from "../assets/discord.svg";
 
-import { FaTwitter } from "react-icons/fa";
-
 export const About = () => {
   return (
     <section className="my-16 flex md:justify-between md:flex-row flex-col">

@@ -44,7 +44,7 @@ export const Contact = () => {
 
       <form
         onSubmit={formSubmission}
-        className="flex flex-col items-center gap-4 m-10  border border-gray-500 p-6 md:w-100 w-80 rounded justify-around border-r-4 border-b-4 "
+        className="flex flex-col items-center gap-4 m-10  border border-gray-500 p-6 md:w-100 w-80 rounded-lg justify-around border-r-4 border-b-4 "
       >
         <div className="inputs">
           <label htmlFor="name">Name:</label>
@@ -89,7 +89,7 @@ export const Contact = () => {
 
         <button
           type="submit"
-          className="bg-(--primary) w-70 rounded p-2.5 font-bold mt-5 hover:-translate-y-1 hover:bg-amber-700"
+          className="bg-(--primary) w-70 rounded p-2.5 font-bold mt-5 hover:-translate-y-1 text-[#fafafa] hover:bg-amber-700"
         >
           Send Message
         </button>
